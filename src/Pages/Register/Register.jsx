@@ -43,7 +43,7 @@ const Register = () => {
                 icon: 'success',
                 confirmButtonText: 'Cool'
               })
-
+              e.target.reset();
         })
         .catch(error =>{
             console.log(error);
@@ -55,7 +55,7 @@ const Register = () => {
         <div>
         <div className="flex ml-52 gap-8 mb-20">
             <div className="">
-                <img className="w-[400px] h-[350px] my-16" src="/public/assets/images/login/login.svg" alt="" />
+                <img className="w-[400px] h-[350px] my-16" src="/login/login.svg" alt="" />
             </div>
             <div className="border lg:w-[500px] rounded-lg p-12 h-[500px]">
                 <h2 className="text-4xl text-center my-4 text-[#444444] font-bold">SignUp</h2>
@@ -80,7 +80,7 @@ const Register = () => {
 
                         {/* <Link to='/login'> */}
                         <div className="form-control mt-6">
-                            <button className="btn bg-[#FF3811] text-white">LogIn</button>
+                            <button className="btn bg-[#FF3811] text-white">signup</button>
                         </div>
 
                             <label className="label">
