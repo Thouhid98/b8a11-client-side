@@ -33,21 +33,54 @@ const Register = () => {
             return;
         }
 
-        // createUser firebase 
+        //Old code createUser firebase 
+        // createUser(email, password)
+        // .then(data =>{
+        //     console.log(data);
+        //     Swal.fire({
+        //         title: 'Success!',
+        //         text: 'SignUp Successfull',
+        //         icon: 'success',
+        //         confirmButtonText: 'Cool'
+        //       })
+        //       e.target.reset();
+        // })
+        // .catch(error =>{
+        //     console.log(error);
+        // })
+
+        // New code 
         createUser(email, password)
-        .then(data =>{
-            console.log(data);
-            Swal.fire({
-                title: 'Success!',
-                text: 'SignUp Successfull',
-                icon: 'success',
-                confirmButtonText: 'Cool'
-              })
-              e.target.reset();
+        .then(result =>{
+            console.log(result.user);
+            
+            // sending user info to database 
+            const user = { email }
+            fetch('http://localhost:5000/user', {
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body:JSON.stringify(user)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'SignUp Successfull',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+                e.target.reset();                 
+            })
         })
         .catch(error =>{
             console.log(error);
         })
+
+
+
 
     }
 
