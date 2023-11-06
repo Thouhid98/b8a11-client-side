@@ -1,7 +1,41 @@
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
+import { useContext } from 'react';
+import Swal from 'sweetalert2';
 
 const Showallblog = ({ blog }) => {
     const { _id, title, shortdes, category, date, photo, longdes } = blog;
+    // console.log(blog);
+    const { user } = useContext(AuthContext);
+
+    // Add to Wishlist 
+    const {email} = user;
+    // console.log(user.email);
+
+    const handleWishlist = () =>{
+        const addtoWishlist = {_id, title, photo, category, shortdes, longdes, date, email }
+        console.log(addtoWishlist);
+
+        // send data to database 
+        fetch('http://localhost:5000/addtoWishlist', {
+            method:'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(addtoWishlist)
+        })
+        .then(res => res.json())
+        .then(data => {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Car Added Successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+            console.log(data);          
+        })
+
+    }
 
     return (
         <div>
@@ -32,7 +66,7 @@ const Showallblog = ({ blog }) => {
 
                         {/* Update  */}
                         {/* <Link to={`/updatecar/${_id}`}> */}
-                        <button className='btn btn-neutral'>Add to Wishlist</button>
+                        <button onClick={handleWishlist} className='btn btn-neutral'>Add to Wishlist</button>
                         {/* </Link> */}
                     </div>
                 </div>
