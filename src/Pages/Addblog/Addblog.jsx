@@ -12,7 +12,7 @@ const Addblog = () => {
         const photo = form.photo.value;
 
         const newblog = {title, shortdes, category, date, photo, longdes};
-        console.log(newblog);
+        // console.log(newblog);
 
         // send Data to server 
         fetch('http://localhost:5000/blogs', {

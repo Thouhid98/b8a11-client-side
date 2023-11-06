@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Addblog from "../Pages/Addblog/Addblog";
 import Allblogs from "../Pages/Allblogs/Allblogs";
+import Blogdetails from "../Pages/Blogdetails/Blogdetails";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
                 path:'/allblogs',
                 element:<Allblogs></Allblogs>,
                 loader:()=>fetch('http://localhost:5000/allblogs')
+            },
+            {
+                path:'/blogdetails/:id',
+                element:<Blogdetails></Blogdetails>,
+                loader:({params})=>fetch(`http://localhost:5000/blogdetails/${params.id}`)
             }
         ]
     },
