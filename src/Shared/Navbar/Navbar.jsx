@@ -19,13 +19,10 @@ const Navbar = () => {
             <div>
                 <ul className="flex gap-6 my-6 ml-8 text-xl font-semibold">
                     <Link to='/'>Home</Link>
-                    <Link to='about'>Add Blog</Link>
-                    <Link>All blogs</Link>
-                    <Link>Featured Blogs</Link>
-                    <Link>Wishlist</Link>
-
-
-
+                    <Link to='/addblog'>Add Blog</Link>
+                    <Link to='/allblogs'>All blogs</Link>
+                    <Link to='/featuredblogs'>Featured Blogs</Link>
+                    <Link to='/wishlist'>Wishlist</Link>
                 </ul>
             </div>
 
@@ -45,9 +42,7 @@ const Navbar = () => {
                 {
                     user?.email ?
                         <>
-                        <div className='flex gap-3'>
-                            
-                            
+                        <div className='flex gap-3'> 
                                 <div className='flex my-3 gap-2'>
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">

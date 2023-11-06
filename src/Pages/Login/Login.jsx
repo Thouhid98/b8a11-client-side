@@ -2,11 +2,13 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
 
+// google 
+import app from "../../firebase/firebase.config";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+
 
 const Login = () => {
-
     const { signinUser } = useContext(AuthContext);
-
 
     const handleLogin = e => {
         e.preventDefault();
@@ -38,6 +40,21 @@ const Login = () => {
             })
 
     }
+
+      // Google 
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+      const handleGoogleSignIn = () => {
+          signInWithPopup(auth, provider)
+              .then(result => {
+                  console.log(result.user);
+                //   navigate(location?.state ? location.state : '/');
+  
+              })
+              .catch(error => {
+                  console.log(error);
+              })
+      }
 
 
     return (
@@ -74,10 +91,16 @@ const Login = () => {
 
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover text-base ml-40 text-center">Or Sign In with</a>
-                            </label>
-                                
-                       
+                            </label>                    
                     </form>
+
+                    <div>
+                    
+                        <button onClick={handleGoogleSignIn} className="btn btn-outline bg-[#FF3811] text-white w-full mb-3 mt-3">
+                            Google
+                        </button>
+                    
+                    </div>
                 </div>
             </div>
         </div>
