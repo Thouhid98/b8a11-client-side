@@ -28,7 +28,7 @@ const Showallblog = ({ blog }) => {
         .then(data => {
             Swal.fire({
                 title: 'Success!',
-                text: 'Car Added Successfully',
+                text: 'Your Wish Fullfill',
                 icon: 'success',
                 confirmButtonText: 'Cool'
               })
@@ -58,14 +58,8 @@ const Showallblog = ({ blog }) => {
                         </Link>
                         {/* Old Link  */}
 
-                        {/* New Link  */}
-                        {/* <Link to={`/viewdetails/${name}`}>
-                        <button className="btn btn-primary bg-yellow-700">View Details</button>
-                        </Link> */}
-                        {/* New Link  */}
 
-                        {/* Update  */}
-                        {/* <Link to={`/updatecar/${_id}`}> */}
+                        {/* Update  */}                     
                         <button onClick={handleWishlist} className='btn btn-neutral'>Add to Wishlist</button>
                         {/* </Link> */}
                     </div>
