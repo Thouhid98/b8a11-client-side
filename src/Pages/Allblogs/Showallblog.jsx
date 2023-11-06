@@ -7,6 +7,7 @@ const Showallblog = ({ blog }) => {
     const { _id, title, shortdes, category, date, photo, longdes } = blog;
     // console.log(blog);
     const { user } = useContext(AuthContext);
+    console.log(user);
 
     // Add to Wishlist 
     const {email} = user;
