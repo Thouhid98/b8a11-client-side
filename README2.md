@@ -57,7 +57,8 @@ d.	react-table-library
 1.	In this page show all the blogs wishlisted by a specific user.
 2.	Each blog should have a title, image, short description, category, details button and remove wishlist button
 3.	Clicking on remove wishlist will remove the blog from his/her wishlist
-Authentication:
+
+# Authentication:
 1.	You Must implement Email and password based Authentication. This means, you will have to implement the Registration and the login page.
 2.	Also, implement at least one extra login which could be (facebook, github, google, etc).
 3.	Add a 404 page (not found page)

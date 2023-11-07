@@ -37,6 +37,7 @@ const Navbar = () => {
                     <Link to='/featuredblogs'>Featured Blogs</Link>
 
                     {/* <Link to={`/fetchwishlist/${email}`}>Wishlist</Link> */}
+                    
                     {/* <NavLink
                         to={`/fetchwishlist/${email}`}
                         className={({ isActive, isPending }) =>
