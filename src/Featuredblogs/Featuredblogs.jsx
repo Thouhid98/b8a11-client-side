@@ -35,7 +35,7 @@ const Featuredblogs = () => {
                             fblogs.map(user =>
                                 <tr key={user._id}>
 
-                                    <td>{user._id}</td>
+                                    <td>{user.email}</td>
                                     <td>{user.title}</td>
                                     <td>{user.category}</td>
                                     <td>{user.shortdes}</td>

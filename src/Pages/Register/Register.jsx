@@ -77,6 +77,12 @@ const Register = () => {
         })
         .catch(error =>{
             console.log(error);
+            Swal.fire({
+                title: 'warning!',
+                text: 'Try Different Email',
+                icon: 'warning',
+                confirmButtonText: 'Cool'
+            })
         })
 
 

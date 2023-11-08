@@ -7,6 +7,8 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     // const {email} = user;
     // console.log(email);
+    const email = user?.email;
+
 
     const handleSignOut = () => {
         logOut()
@@ -23,37 +25,14 @@ const Navbar = () => {
                     <Link to='/'>Home</Link>
                     <Link to='/addblog'>Add Blog</Link>
                     <Link to='/allblogs'>All blogs</Link>
-
-
-                    {/* <NavLink
-                        to="/allblogs"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "font-bold text-black underline" : "text-black"
-                        }
-                    >
-                        All blogs
-                    </NavLink> */}
-
                     <Link to='/featuredblogs'>Featured Blogs</Link>
-
-                    {/* <Link to={`/fetchwishlist/${email}`}>Wishlist</Link> */}
-                    
-                    {/* <NavLink
-                        to={`/fetchwishlist/${email}`}
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "font-bold text-slate-300  underline" : "text-black"
-                        }
-                    >
-                        Wishlist
-                    </NavLink> */}
-
-                    <Link to='/fetchwishlist/:email'>Wishlist</Link>
+                    <Link to={`/fetchwishlist/${email}`}>Wishlist</Link>           
+                
                 </ul>
             </div>
 
 
             <div className="flex gap-4">
-
                 {
                     user?.email ?
                         <>
@@ -72,6 +51,7 @@ const Navbar = () => {
                                 <button className="btn bg-white  my-3 border-[#FF3811] text-[#FF3811]">Logout</button>
                             </Link> */}
                                 {/* old code  */}
+                                
                                 <NavLink to='/login'>
                                     <button onClick={handleSignOut} className="btn bg-white  my-3 border-[#FF3811] text-[#FF3811]">Logout</button>
                                 </NavLink>

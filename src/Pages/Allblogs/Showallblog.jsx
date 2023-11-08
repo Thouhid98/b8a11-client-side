@@ -5,13 +5,13 @@ import Swal from 'sweetalert2';
 
 const Showallblog = ({ blog }) => {
     const { _id, title, shortdes, category, date, photo, longdes } = blog;
-    // console.log(blog);
+    
     const { user } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
 
     // Add to Wishlist 
-    const {email} = user;
-    // console.log(user.email);
+    const email = user?.email;
+
 
     const handleWishlist = () =>{
         const addtoWishlist = {_id, title, photo, category, shortdes, longdes, date, email }

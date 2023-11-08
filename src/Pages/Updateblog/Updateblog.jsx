@@ -1,85 +1,17 @@
-import Swal from "sweetalert2";
 
-const Addblog = () => {
-    const handleAddBlog = e =>{
-        e.preventDefault();
-        const form = e.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const ownerpic = form.ownerpic.value;
+const Updateblog = () => {
 
-        const title = form.title.value;
-        const shortdes = form.shortdes.value;
-        const longdes = form.longdes.value;
-        const category = form.category.value;
-        const date = form.date.value;
-        const photo = form.photo.value;
-
-        const newblog = {name, email, ownerpic, title, shortdes, category, date, photo, longdes};
-        // console.log(newblog);
-
-        // send Data to server 
-        fetch('http://localhost:5000/blogs', {
-            method:'POST',
-            headers:{
-                'content-type': 'application/json'
-            },
-            body:JSON.stringify(newblog)
-        })
-        .then(res => res.json())
-        .then(data =>{
-            Swal.fire({
-                title: 'Success!',
-                text: 'Add Product Successfull',
-                icon: 'success',
-                confirmButtonText: 'Cool'
-              })
-            console.log(data);
-            e.target.reset()
-        })
-
+    const handleUpdateBlog = e =>{
+        
     }
-
     return (
         <div>
             <div className=" pl-32 pr-20 mb-32 rounded-xl bg-white">
                 <h2 className="text-4xl font-bold mb-3">Add Blogs</h2>
 
-                <form  onSubmit={handleAddBlog}>
+                <form onSubmit={handleUpdateBlog}>
 
-                    <div className="flex gap-4 justify-center my-3">
-
-                    <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Name of Blogger</span>
-                            </label>
-                            <label className="input-group">
-
-                                <input type="text" name="name" required placeholder="Name of Blogger" className="input input-bordered" />
-                            </label>
-                    </div>
-
-                    <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email of Blogger</span>
-                            </label>
-                            <label className="input-group">
-
-                                <input type="text" name="email" required placeholder="Email of Blogger" className="input input-bordered" />
-                            </label>
-                    </div>
-
-
-                    <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Blog Owner Photo </span>
-                            </label>
-                            <label className="input-group">
-
-                                <input type="text" name="ownerpic" placeholder="Owner Photo" className="input input-bordered" required />
-                            </label>
-                        </div>
-                    </div>
+                
 
                     <div className="flex gap-4 justify-center my-3">
                         <div className="form-control">
@@ -147,7 +79,7 @@ const Addblog = () => {
                             </label>
                         </div>
 
-                       
+
                     </div>
                     <button type="submit" name="Add coffee" className="btn text-white bg-[#FF3811] mt-6 lg:ml-[500px]">Add Blog</button>
                 </form >
@@ -156,4 +88,4 @@ const Addblog = () => {
     );
 };
 
-export default Addblog;
+export default Updateblog;
