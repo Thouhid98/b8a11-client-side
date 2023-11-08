@@ -40,7 +40,6 @@ const Featuredblogs = () => {
                                     
                                     <td><img className='h-20 w-32' src={user.ownerpic} alt="" /></td>
 
-
                                     <td>
                                         <button
                                             className="btn btn-primary text-white bg-[#FF3811]">Delete</button></td>

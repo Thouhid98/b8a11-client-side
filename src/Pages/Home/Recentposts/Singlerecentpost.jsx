@@ -12,10 +12,10 @@ const Singlerecentpost = ({recent}) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title text-3xl text-[#FF3811] font-bold">{title}</h2>
-                    <p>Published : {date}</p>
-                    <p className='h-[150px]'>{shortdes}</p>
+                    <p className='text-black font-medium'>Published : {date}</p>
+                    <p className='h-[50px]'>{shortdes}</p>
 
-                    <p>Category: {category}</p>
+                    <p className='text-black font-medium'>Category: {category}</p>
                     <div className="card-actions">
 
                         {/* Old Link  */}

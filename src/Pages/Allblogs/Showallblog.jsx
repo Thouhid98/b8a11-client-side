@@ -47,10 +47,10 @@ const Showallblog = ({ blog }) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title text-3xl text-[#FF3811] font-bold">{title}</h2>
-                    <p>Published : {date}</p>
+                    <p className='text-black font-medium'>Published : {date}</p>
                     <p>{shortdes}</p>
 
-                    <p>Category: {category}</p>
+                    <p className='text-black font-medium'>Category: {category}</p>
                     <div className="card-actions">
 
                         {/* Old Link  */}

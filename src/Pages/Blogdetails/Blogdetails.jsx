@@ -142,9 +142,9 @@ const Blogdetails = () => {
                         }
                     </div>
 
-                    <div>
+                    <div className="mt-3">
                         <table>
-                            <thead className="-ml-12">
+                            <thead className="">
                                 <tr className='text-xl font-semibold'>  
                                     <th className="">Email</th>             
                                     <th>Comments</th>                                   

@@ -2,7 +2,7 @@
 const Banner = () => {
     return (
         <div className="pl-12 pr-12 mb-20">
-            <div className="hero -mt-10 h-[550px] bg-[url('')]" >
+            <div className="hero -mt-10 h-[550px] bg-[url('/bg-1.avif')]" >
                 <div className="hero-overlay bg-opacity-60"></div>
 
 
