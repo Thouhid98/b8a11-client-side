@@ -22,10 +22,9 @@ const Featuredblogs = () => {
                     <thead>
                         <tr className='text-xl font-semibold'>
 
+                            <th>Name</th>
                             <th>Email</th>
                             <th>Title</th>
-                            <th>Category</th>
-                            <th>ShortDescription</th>
                             <th>Picture</th>
                             <th>Action</th>
                         </tr>
@@ -35,11 +34,11 @@ const Featuredblogs = () => {
                             fblogs.map(user =>
                                 <tr key={user._id}>
 
+                                    <td>{user.name}</td>
                                     <td>{user.email}</td>
                                     <td>{user.title}</td>
-                                    <td>{user.category}</td>
-                                    <td>{user.shortdes}</td>
-                                    <td><img className='h-20 w-32' src={user.photo} alt="" /></td>
+                                    
+                                    <td><img className='h-20 w-32' src={user.ownerpic} alt="" /></td>
 
 
                                     <td>

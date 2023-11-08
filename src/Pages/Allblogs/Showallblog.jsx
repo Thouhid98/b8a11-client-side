@@ -41,7 +41,7 @@ const Showallblog = ({ blog }) => {
     return (
         <div>
             
-            <div className="card w-96 bg-gray-100 shadow-xl mb-10">
+            <div className="card w-96 lg:h-[600px] bg-gray-100 shadow-xl mb-10">
                 <figure className="px-10 pt-10">
                     <img src={photo} alt="blogs" className="rounded-xl h-56" />
                 </figure>

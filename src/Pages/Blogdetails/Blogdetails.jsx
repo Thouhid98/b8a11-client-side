@@ -24,7 +24,7 @@ const Blogdetails = () => {
                 </div>
                 <div className="p-6">
                     <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-[#FF3811] uppercase">
-                        startups
+                        {date}
                     </h6>
                     <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         {title}

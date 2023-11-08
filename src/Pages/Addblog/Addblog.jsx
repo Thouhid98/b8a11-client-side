@@ -123,6 +123,7 @@ const Addblog = () => {
                                 <option value="travelblog">Travel Blog</option>
                                 <option value="motoblog">Moto Blog</option>
                                 <option value="foodblog">Food Blog</option>
+                                <option value="gameblog">Game Blog</option>
                             </select>
                         </div>
 
