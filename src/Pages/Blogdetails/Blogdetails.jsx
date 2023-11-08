@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Blogdetails = () => {
     const { user } = useContext(AuthContext)
@@ -9,6 +10,42 @@ const Blogdetails = () => {
     console.log(blogdetails);
     const { _id, name, email, title, shortdes, category, date, photo, longdes } = blogdetails;
     // console.log(blogdetails?.email);
+
+
+    // Add Comments 
+    const handleComments = e =>{
+        e.preventDefault();
+        const form = e.target;
+        const comment = form.comment.value;
+        console.log(comment);
+
+        const currentuseremail = user?.email;
+
+        const allcomment = {currentuseremail, comment }
+
+        // send data to database 
+        fetch('http://localhost:5000/comments', {
+            method:'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(allcomment)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            Swal.fire({
+                title: 'Success!',
+                text: 'Add Comment Successfull',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+            console.log(data);
+            e.target.reset()
+        })
+
+
+
+    }
 
     return (
         <div className="lg:ml-64 mb-28">
@@ -43,7 +80,7 @@ const Blogdetails = () => {
                         (user?.email  == blogdetails?.email) ?
 
                             <Link to={`/updateblog/${_id}`}>
-                                <button className="btn btn-primary text-white bg-[#FF3811]">Update Blog</button>
+                                <button className="btn btn-primary mb-4 text-white bg-[#FF3811]">Update Blog</button>
                             </Link>
 
                             :
@@ -52,7 +89,7 @@ const Blogdetails = () => {
                                 className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-[#FF3811] uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                 type="button"
                             >
-                                Learn More
+                                Comments
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -72,9 +109,21 @@ const Blogdetails = () => {
                         </a>
 
                         }
-                        
 
+                    </div>
 
+                    <div className="">
+                            {
+                                (user?.email  !== blogdetails?.email) ?
+                                <>
+                                <form onSubmit={handleComments}>
+                                <textarea  className="border ml-2 p-4" name="comment" id="" cols="30" placeholder="Add Comments" rows="1"></textarea><br />
+                                <button className="btn btn-primary bg-[#FF3811] text-white ml-2">Submit</button>
+                                </form>
+                                </>
+                                :
+                                'No Comment'
+                            }
                     </div>
             
                 </div>
