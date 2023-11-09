@@ -32,7 +32,7 @@ const Recentposts = () => {
                 </ul>
             </div> */}
             <div >
-
+                <h2 className="text-center text-5xl text-gray-700 font-bold mb-12">Recent Posts</h2>
                 <div className="grid lg:grid-cols-3 ml-12">
                     {
                         latestblogs.map(recent =><Singlerecentpost key={recent._id} recent={recent}></Singlerecentpost>)

@@ -5,14 +5,15 @@ import Recentposts from "./Recentposts/Recentposts";
 
 
 const Home = () => {
+  
     return (
         <div>
             <Banner></Banner>
             <Recentposts></Recentposts>
             <Newslater></Newslater>
             <Article></Article>
-           
         </div>
+
     );
 };
 

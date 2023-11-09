@@ -16,9 +16,9 @@ const Navbar = () => {
             .catch()
     }
     return (
-        <div className="flex justify-between pr-16 pl-16 pt-8 pb-10  ">
+        <div className="flex lg:justify-between lg:pr-16 lg:pl-16 lg:pt-8 pb-10  ">
             <div>
-                <img className='w-44 -mt-3' src={logo} alt="" />
+                <img className='lg:w-44 -mt-3' src={logo} alt="" />
             </div>
             <div>
                 <ul className="flex gap-6 my-6 ml-8 text-xl font-semibold">
@@ -32,7 +32,7 @@ const Navbar = () => {
             </div>
 
 
-            <div className="flex gap-4">
+            <div className="lg:flex lg:gap-4">
                 {
                     user?.email ?
                         <>

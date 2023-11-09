@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 
 const Newslater = () => {
     const divStyle = {
-        backgroundImage: "url('https://source.unsplash.com/random/640x480')",
+        backgroundImage: "url('/bg-2.avif')",
         backgroundPosition: 'center center',
         backgroundBlendMode: 'multiply',
         backgroundSize: 'cover'
@@ -21,15 +21,13 @@ const Newslater = () => {
                 icon: 'success',
                 confirmButtonText: 'Cool'
               })
+              e.target.reset();
         }
     }
 
-
-
-
     return (
-        <div>
-            <div className="w-full dark:bg-gray-500" style={divStyle}>
+        <div className="pl-12 pr-12 mb-20 mt-10">
+            <div className="w-full dark:bg-gray-500 " style={divStyle}>
                 <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
                     <h1 className="text-5xl antialiased font-semibold leadi text-center dark:text-gray-100">Newslater</h1>
                     <p className="pt-2 pb-8 text-xl antialiased text-center dark:text-gray-100">Find out about events and other news</p>

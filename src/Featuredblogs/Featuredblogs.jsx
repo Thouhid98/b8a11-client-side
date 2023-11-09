@@ -42,7 +42,7 @@ const Featuredblogs = () => {
 
                                     <td>
                                         <button
-                                            className="btn btn-primary text-white bg-[#FF3811]">Delete</button></td>
+                                            className="btn btn-primary text-white bg-[#FF3811]">View Info</button></td>
                                 </tr>
                             )
                         }
