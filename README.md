@@ -1,8 +1,15 @@
-# React + Vite
+# Website Link
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# AssignmentId: assignment_category_006  Blog Website
+# Blogger Features:
+1. Used MongoDB Database for Backend
+2. CRUD Operations for data post and fetch
+3. Email and Password authentication using Firebase
+4. Google Login With Firebase
+5. React Loading Skeleton for handle loading data 
+6. sweetalert for message
+7. React Data Table
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# DrawBacks
+1. Please don't add cart more than once.
+1. Data delete but not remove from ui. Need to go back to another page and come again

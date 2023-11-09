@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Wishlist = () => {
+    const {loading} = useContext(AuthContext)
+    if(loading){
+        return <span className="loading loading-spinner loading-lg"></span>
+    }
+
     const wishcollection = useLoaderData();
     // console.log(wishcollection);
     
@@ -18,7 +24,7 @@ const Wishlist = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                
+               
                 if (data.deletedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
