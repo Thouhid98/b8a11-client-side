@@ -18,7 +18,7 @@ const Showallblog = ({ blog }) => {
         console.log(addtoWishlist);
 
         // send data to database 
-        fetch('http://localhost:5000/addtoWishlist', {
+        fetch('https://b8a11-server-side-seven.vercel.app/addtoWishlist', {
             method:'POST',
             headers:{
                 'content-type': 'application/json'

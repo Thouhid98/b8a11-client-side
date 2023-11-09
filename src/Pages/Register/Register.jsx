@@ -56,7 +56,7 @@ const Register = () => {
             
             // sending user info to database 
             const user = { email }
-            fetch('http://localhost:5000/user', {
+            fetch('https://b8a11-server-side-seven.vercel.app/user', {
                 method:'POST',
                 headers:{
                     'content-type': 'application/json'

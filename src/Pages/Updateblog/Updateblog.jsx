@@ -20,7 +20,7 @@ const Updateblog = () => {
         console.log(newupdateBlog);
 
         // send Data to server 
-        fetch(`http://localhost:5000/updateblog/${_id}`,{
+        fetch(`https://b8a11-server-side-seven.vercel.app/updateblog/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

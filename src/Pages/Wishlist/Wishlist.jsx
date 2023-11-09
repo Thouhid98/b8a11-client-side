@@ -1,14 +1,10 @@
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../Providers/AuthProvider";
+
 
 const Wishlist = () => {
-    const {loading} = useContext(AuthContext)
-    if(loading){
-        return <span className="loading loading-spinner loading-lg"></span>
-    }
-
+    
     const wishcollection = useLoaderData();
     // console.log(wishcollection);
     
@@ -18,7 +14,7 @@ const Wishlist = () => {
     const handleDelete = (id) => {
         console.log(id);
 
-        fetch(`http://localhost:5000/fetchwishlist/:email/${id}`, {
+        fetch(`https://b8a11-server-side-seven.vercel.app/fetchwishlist/:email/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

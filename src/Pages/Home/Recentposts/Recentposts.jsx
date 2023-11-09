@@ -8,7 +8,7 @@ const Recentposts = () => {
 
     useEffect(() => {
         // Fetch data from the Node.js server
-        axios.get('http://localhost:5000/latestblogs')
+        axios.get('https://b8a11-server-side-seven.vercel.app/latestblogs')
             .then((response) => {
                 setLatestblogs(response.data);
             });

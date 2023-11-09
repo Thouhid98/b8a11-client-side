@@ -18,7 +18,7 @@ const Blogdetails = () => {
     console.log(comments);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/getcomments')
+        axios.get('https://b8a11-server-side-seven.vercel.app/getcomments')
             .then(response => {
                 setComments(response.data);
             })
@@ -40,7 +40,7 @@ const Blogdetails = () => {
         const allcomment = { currentuseremail, comment }
 
         // send data to database 
-        fetch('http://localhost:5000/comments', {
+        fetch('https://b8a11-server-side-seven.vercel.app/comments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

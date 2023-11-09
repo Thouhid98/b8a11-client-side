@@ -37,27 +37,27 @@ const router = createBrowserRouter([
             {
                 path:'/allblogs',
                 element:<Allblogs></Allblogs>,
-                loader:()=>fetch('http://localhost:5000/allblogs')
+                loader:()=>fetch('https://b8a11-server-side-seven.vercel.app/allblogs')
             },
             {
                 path:'/featuredblogs',
                 element:<Featuredblogs></Featuredblogs>,
-                loader:()=>fetch('http://localhost:5000/featuredblogs')
+                loader:()=>fetch('https://b8a11-server-side-seven.vercel.app/featuredblogs')
             },
             {
                 path:'/blogdetails/:id',
                 element:<PrivateRoute><Blogdetails></Blogdetails></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/blogdetails/${params.id}`)
+                loader:({params})=>fetch(`https://b8a11-server-side-seven.vercel.app/blogdetails/${params.id}`)
             },
             {
                 path:'/updateblog/:id',
                 element:<PrivateRoute><Updateblog></Updateblog></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/updateblog/${params.id}`)
+                loader:({params})=>fetch(`https://b8a11-server-side-seven.vercel.app/updateblog/${params.id}`)
             },
             {
                 path:'/fetchwishlist/:email',
                 element:<PrivateRoute><Wishlist></Wishlist></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/fetchwishlist/${params.email}`)
+                loader:({params})=>fetch(`https://b8a11-server-side-seven.vercel.app/fetchwishlist/${params.email}`)
             },
             
         ]

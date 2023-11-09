@@ -15,7 +15,7 @@ const Allblogs = () => {
 
     const handelCategory = () => {
 
-        fetch(`http://localhost:5000/blogs/${category}`)
+        fetch(`https://b8a11-server-side-seven.vercel.app/blogs/${category}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
