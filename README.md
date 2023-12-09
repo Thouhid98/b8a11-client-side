@@ -1,7 +1,6 @@
 # Website Link
 https://b8a11-client-side.web.app
 
-# AssignmentId: assignment_category_006  Blog Website
 # Blogger Features:
 1. Used MongoDB Database for Backend
 2. CRUD Operations for data post and fetch
