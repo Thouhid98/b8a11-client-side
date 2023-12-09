@@ -10,6 +10,4 @@ https://b8a11-client-side.web.app
 6. sweetalert for message
 7. React Data Table
 
-# DrawBacks
-1. Please don't add cart more than once.
-1. Data delete but not remove from ui. Need to go back to another page and come again
+
